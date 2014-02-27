@@ -10,7 +10,7 @@
 
   <groupId>org.scalanlp</groupId>
   <artifactId>jcuda-parent</artifactId>
-  <version>0.5.5-SNAPSHOT</version>
+  <version>0.5.5</version>
   <packaging>pom</packaging>
 
   <modules>

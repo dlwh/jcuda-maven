@@ -5,12 +5,12 @@
   <parent>
     <groupId>org.scalanlp</groupId>
     <artifactId>jcuda-parent</artifactId>
-    <version>0.5.5-SNAPSHOT</version>
+    <version>0.5.5</version>
   </parent>
 
   <groupId>org.scalanlp</groupId>
   <artifactId>jcusparse</artifactId>
-  <version>0.5.5-SNAPSHOT</version>
+  <version>0.5.5</version>
   <packaging>jar</packaging>
 
   <dependencies>
@@ -28,7 +28,7 @@
     <dependency>
       <groupId>org.scalanlp</groupId>
       <artifactId>jcuda</artifactId>
-      <version>0.5.5-SNAPSHOT</version>
+      <version>0.5.5</version>
     </dependency>
   </dependencies>
 
