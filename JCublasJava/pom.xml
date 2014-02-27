@@ -7,12 +7,12 @@
   <parent>
     <groupId>org.scalanlp</groupId>
     <artifactId>jcuda-parent</artifactId>
-    <version>0.5.5</version>
+    <version>0.5.5-SNAPSHOT</version>
   </parent>
 
   <groupId>org.scalanlp</groupId>
   <artifactId>jcublas</artifactId>
-  <version>0.5.5</version>
+  <version>0.5.5-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <dependencies>
@@ -30,7 +30,7 @@
     <dependency>
       <groupId>org.scalanlp</groupId>
       <artifactId>jcuda</artifactId>
-      <version>0.5.5</version>
+      <version>0.5.5-SNAPSHOT</version>
     </dependency>
   </dependencies>
 
