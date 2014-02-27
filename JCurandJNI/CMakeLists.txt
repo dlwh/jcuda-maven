@@ -1,0 +1,17 @@
+set (BUILD_SHARED_LIBS ON)
+
+include_directories (src/
+  ../CommonJNI/src
+  ${JNI_INCLUDE_DIRS}
+  ${CUDA_INCLUDE_DIRS}
+  )
+  
+CUDA_ADD_LIBRARY(JCurand-${CMAKE_HOST}-${CMAKE_ARCH}
+  src/JCurand.cpp
+)
+
+CUDA_ADD_CURAND_TO_TARGET(JCurand-${CMAKE_HOST}-${CMAKE_ARCH})
+
+TARGET_LINK_LIBRARIES(JCurand-${CMAKE_HOST}-${CMAKE_ARCH}
+  CommonJNI
+)

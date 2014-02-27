@@ -1,0 +1,7 @@
+*.o
+*.class
+target/
+*.cmake
+lib/
+CMakeFiles
+.*.swp

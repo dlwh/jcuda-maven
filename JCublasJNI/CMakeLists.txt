@@ -1,0 +1,17 @@
+set (BUILD_SHARED_LIBS ON)
+
+include_directories (src/
+  ../CommonJNI/src
+  ${JNI_INCLUDE_DIRS}
+  ${CUDA_INCLUDE_DIRS}
+  )
+  
+CUDA_ADD_LIBRARY(JCublas-${CMAKE_HOST}-${CMAKE_ARCH}
+  src/JCublas.cpp
+)
+
+CUDA_ADD_CUBLAS_TO_TARGET(JCublas-${CMAKE_HOST}-${CMAKE_ARCH})
+
+TARGET_LINK_LIBRARIES(JCublas-${CMAKE_HOST}-${CMAKE_ARCH}
+  CommonJNI
+)

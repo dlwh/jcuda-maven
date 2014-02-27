@@ -1,0 +1,17 @@
+set (BUILD_SHARED_LIBS ON)
+
+include_directories (src/
+  ../CommonJNI/src
+  ${JNI_INCLUDE_DIRS}
+  ${CUDA_INCLUDE_DIRS}
+  )
+  
+CUDA_ADD_LIBRARY(JCufft-${CMAKE_HOST}-${CMAKE_ARCH}
+  src/JCufft.cpp
+)
+
+CUDA_ADD_CUFFT_TO_TARGET(JCufft-${CMAKE_HOST}-${CMAKE_ARCH})
+
+TARGET_LINK_LIBRARIES(JCufft-${CMAKE_HOST}-${CMAKE_ARCH}
+  CommonJNI
+)

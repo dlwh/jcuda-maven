@@ -1,0 +1,17 @@
+set (BUILD_SHARED_LIBS ON)
+
+include_directories (src/
+  ../CommonJNI/src
+  ${JNI_INCLUDE_DIRS}
+  ${CUDA_INCLUDE_DIRS}
+  )
+  
+CUDA_ADD_LIBRARY(JCusparse2-${CMAKE_HOST}-${CMAKE_ARCH}
+  src/JCusparse2.cpp
+)
+
+CUDA_ADD_CUSPARSE_TO_TARGET(JCusparse2-${CMAKE_HOST}-${CMAKE_ARCH})
+
+TARGET_LINK_LIBRARIES(JCusparse2-${CMAKE_HOST}-${CMAKE_ARCH}
+  CommonJNI
+)
